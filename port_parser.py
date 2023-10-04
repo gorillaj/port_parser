@@ -6,10 +6,11 @@ logfile = ("caterpillar_log.txt") #default mode is read only
 pattern = r"([^`~!@#$%^&*()_+={}\[\]|\\:;“’<,>.?๐฿A-Za-z](?:[0-9]+(?:-[0-9]+)?)(?:,[0-9]+(?:-[0-9]+)?)*)" #pattern for port number 0-65535
 with open(logfile) as f:
     for line in f:
-        num_pattern=re.findall( '(\d+)', line ) #filter out nondigits
+        num_pattern=re.findall( '(\d+)', line )
         for item in num_pattern:
-            numbers=re.search(pattern,item)  #need to filter for str lengths greater than 5
-            print(numbers.group()) #is group needed here?
+            numbers=re.findall(pattern,item)
+            print(numbers)
+        
 
 
 
