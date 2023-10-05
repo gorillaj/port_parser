@@ -28,8 +28,7 @@ with open(logfile) as f:
                             for port in all_ports:
                                 ports.add(port)
                                 # ports[port] = ports.get (item, 0) +1                        #output unique values for port no
-print(*ports,sep = "\n")        #additional processing would reveal only certain ports but could overlook potential ones
-                          
+print(*ports,sep = "\n")        #additional processing would reveal only certain ports but could overlook potential ones#logfile.close()                          
                                
 
 
